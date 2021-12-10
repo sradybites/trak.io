@@ -1,0 +1,5 @@
+5;Andrii;Get into a new college;To do;"New CIS college ey"
+4;Clarkson;Lecture;To do;"All the time"
+3;Brady;Code;To do;"brady just wants to code"
+2;Natasha;Sleep;Active;"natasha is tired after 3110 and just wants to sleep"
+1;Andrii;Yeet;Done;"yeet yote yeeten"

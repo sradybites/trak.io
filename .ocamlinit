@@ -1,0 +1,11 @@
+#require "ounit2";;
+#require "ANSITerminal";;
+#require "str";;
+#directory "_build";;
+#load "database.cmo";;
+#load "field.cmo";;
+#load "cluster.cmo";;
+#load "types.cmo";;
+#load "query.cmo";;
+#load "makeCluster.cmo";;
+#load "user.cmo";;

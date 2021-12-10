@@ -1,0 +1,50 @@
+Welcome to Trakio!
+
+Once in the correct directory, use the command "make build" to compile the 
+program. This will check the types in the database file accordingly. 
+
+When testing the functions in database.ml, use the created file "issues.txt" 
+as the file containing tasks.
+
+To test interactively, use the command "make" to launch utop. 
+For the easiest access to database editing functions you can use User.xxx 
+functions, in particular manager_task_edit/write/remove.
+
+In order to run the interactive UI, please run "make start". 
+
+A test user you may use is with the login "Natasha" and password "passwordlol".
+This will allow you to see how a user's (Natasha's) tasks are printed. Natasha's
+user has the Manager role, and so it has access to any actions; after logging 
+in, once prompted, you may choose from Add, Edit, or Delete to test out the 
+actions. (You can also quit the app from there). Within Add, you have the option 
+to either add a task, or add a new member to your team. Edit allows you to edit 
+a specific field (assignee, title, status, description) of someone's task based 
+on ID in your team. Delete allows you to delete a task based on ID.
+
+**Please note!** Having one member on multiple teams is currently not supported, 
+and will cause the program to not behave as we wish it to, so do not add a 
+new member that already exists on another team onto the one you are editing.
+
+If you would like to test a user with the Scrummer role (as Engineer and 
+Scrummer have the same capabilities), log in using the user "Clarkson" and 
+password "password1234". Similar to the Manager role, you will see your own 
+tasks printed. Then you will be presented with the option to either see all the 
+tasks on your team, or to quit the application after viewing your own tasks.
+
+For an immersive experience with the Cluster database that the application
+runs on, make sure you have ran [make build], and then start up utop. 
+Once there, enter [#use "q.ml"], and three modules will be made for use in
+querying and modifying the database: [Tasks], [Teams], and [Users].
+You have access to two functions in each module, [query] and [change], both
+of which accept type [Query.t]. Thus, you can explore the database by forming
+query statements that obey both the structure of the [Query.t] type and
+standard OCaml syntax. Here are a couple examples you may use:
+[Users.query (GET (FROM None, WHERE ("user" === "Natasha")))]
+[Tasks.change (UPDATE 
+                (FROM None, 
+                REPLACE (`Status "On break"), 
+                WHERE ("assignee" >>> ["Brady"; "Natasha"; "Andrii"])))]
+
+To run the test suite run make test. The test suite uses the text files ending 
+with test, hence you can do anything you want with main data files as the tests
+won't be affected by them.

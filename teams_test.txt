@@ -1,0 +1,4 @@
+3110 heroes;Manager Andrii;Manager Brady;Manager Natasha
+best profs ever;Scrummer Clarkson;Engineer White;Manager Gries
+Gryffindor;Manager Potter;Scrummer Hermione;Engineer Ron;Engineer Ginny
+Slytherin;Manager Salazar;Manager Voldemort;Engineer Blaze;Scrummer Draco;Engineer Crabb;Engineer Goyle
